@@ -4,5 +4,5 @@ This program coverts an image in ( .jpg format ) to ASCII code , i used [sfml](h
 ## Example
 |input|output|         
 |----------------|-------------------------------|
-| ![ll](https://drive.google.com/uc?export=view&id=1VzuNqEk-uiVi367EHlAEQgrlW6BzhUap) | ![ll](https://drive.google.com/uc?export=view&id=1AycLDO7xRl_JhcEPyf79KTmu1BWZi6UU) | 
+| ![ll](https://drive.google.com/uc?export=view&id=1sk-yDQQe_b4nHyoRI_Oz4_paT2UfuCSH) | ![ll](https://drive.google.com/uc?export=view&id=1G5FOXXG0Mkjnpn9yCnYHP8c1OIMas27x) | 
 
