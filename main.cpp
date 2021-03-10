@@ -11,9 +11,11 @@ int main()
 {
   std::string inputPath;
   std::string outputPath = "";
-  int scaleX;
+  //We choose the ascii characters we want to use 
   std::string ascii = "@#$=+|:. ";
-
+ 
+  //We read the path to the image we want to convert
+  //And we create the output .txt at the same location
   std::cout << "Write the path of the picture you want to convert : ";
   std::cin >> inputPath;
   for (char c : inputPath)
@@ -22,8 +24,14 @@ int main()
   }
   outputPath += ".txt";
 
+  int scaleX;
   std::cout << "Choose the size (in px) that an ASCII character will represent : : ";
   std::cin >> scaleX;
+
+ //We covert the image to grayscale
+ //We consider the image as 2x2 matrix
+ //we extract every pixel using a nested loop 
+ //We turn each pixel into black and white using the RBG colors values in the greyscale system
   std::cout << "Conversion to black and white..." << std::endl;
   sf::Image img;
   img.loadFromFile(inputPath);
@@ -39,8 +47,10 @@ int main()
   }
   grayImg.saveToFile("gray.png");
   std::cout << "Done !" << std::endl;
+
+//We convert the image to lowRes
   std::cout << "Conversion to low resolution..." << std::endl;
-  int scaleY = 2 * scaleX;  // letters spacing in notePad works best with these settings
+  int scaleY = 2 * scaleX;  
   sf::Image greyLowResImg(img);
   int grey = 0;
   for (int i(0); i < img.getSize().x - scaleX; i += scaleX)
@@ -65,6 +75,8 @@ int main()
     }
   }
   std::cout << "Done !" << std::endl;
+
+//We convert it to ascii code according to the lowRes image
   std::cout << "Conversion to ASCII..." << std::endl;
   std::string asciiArt;
 
@@ -76,6 +88,7 @@ int main()
     }
     asciiArt += "\n";
   }
+  
   std::ofstream output(outputPath);
   if (output)
     output << asciiArt;
