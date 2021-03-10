@@ -4,5 +4,5 @@ This program coverts an image in ( .jpg format ) to ASCII code , i used [sfml](h
 ## Example
 |input|output|         
 |----------------|-------------------------------|
-| <img src="../Demo/blender.jpg"> | <img src="../Demo/blenderascii.jpg"> | 
+| <img src="../Demo/blender.jpg"/> | <img src="../Demo/blenderascii.jpg"/> | 
 
